@@ -1,0 +1,1005 @@
+/* Root variables for light theme */
+:root {
+    --bg-color: #fff;
+    --text-color: #171212;
+    --navbar-bg: #171212;
+    --navbar-text: #fff;
+    --card-bg: #f5f5f5;
+    --btn-primary: #4CAF50;
+    --btn-secondary: #6c757d;
+    --btn-hover: #3e8e41;
+    --border-color: #e5e8eb;
+    --hero-bg-image: url('http://localhost/ngohub-pro/images/home-imagee.png');
+    --hero-gradient: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    --hero-text-color: #000;
+  }
+  
+  body {
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--navbar-bg);
+    color: var(--navbar-text);
+    padding: 12px 40px;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .logo {
+    width: 60px; /* Increased from 16px */
+    height: 40px; /* Increased from 16px */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0px;
+    /* Remove the background: #fff; line as we're using an image */
+}
+.logo {
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+  
+  .brand {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  .navbar-center {
+    display: flex;
+    gap: 36px;
+  }
+  
+  .navbar-center a {
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  
+  .navbar-center a:hover {
+    color: var(--btn-primary);
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    color: var(--navbar-text);
+  }
+  
+  .theme-toggle:hover {
+    background: var(--border-color);
+    color: var(--text-color);
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .avatar:hover {
+    transform: scale(1.1);
+  }
+  
+  .hero {
+    position: relative;
+    padding: 40px 160px 0 160px;
+    color: var(--hero-text-color);
+    overflow: hidden;
+    min-height: 480px;
+  }
+  
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--hero-bg-image);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    z-index: -1;
+    filter: brightness(1);
+    transition: background-image 0.5s ease;
+  }
+  
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: var(--hero-gradient);
+    z-index: 0;
+  }
+  
+  .hero-content {
+    position: relative;
+    max-width: 70%;
+    z-index: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+    line-height: 60px;
+  }
+  
+  .hero-content p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 24px 0;
+    line-height: 24px;
+  }
+  
+  .btn-primary {
+    background: var(--btn-primary);
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background: var(--btn-hover);
+  }
+  
+  .btn-secondary {
+    background: var(--btn-secondary);
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-secondary:hover {
+    background: #5a6268;
+  }
+  
+  .about,
+  .ngos,
+  .contact {
+    padding: 40px 160px;
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .about h1,
+  .about h3,
+  .ngos h2,
+  .contact h2 {
+    font-weight: 700;
+  }
+  
+  /* NGO list styling */
+  .ngo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 24px;
+  }
+  
+  .ngo-card {
+    display: flex;
+    gap: 30px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 30px;
+    color: var(--text-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .ngo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ngo-content {
+    flex: 1;
+  }
+  
+  .ngo-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .ngo-card h4 {
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .ngo-card p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .ngo-category {
+    display: inline-block;
+    background: var(--btn-primary);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 400px;
+    margin-top: 24px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: inherit;
+    resize: none;
+    transition: background 0.3s, color 0.3s;
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .contact-form textarea {
+    min-height: 100px;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--btn-primary);
+  }
+  
+  /* Social media section */
+  .social-media {
+    padding: 40px 160px;
+    background: var(--bg-color);
+    text-align: center;
+  }
+  
+  .social-media h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    font-size: 36px;
+    color: var(--text-color);
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    color: var(--btn-primary);
+  }
+  
+  footer {
+    background: var(--navbar-bg);
+    color: var(--navbar-text);
+    text-align: center;
+    padding: 24px 0;
+    font-size: 14px;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+  }
+  
+  .modal-content {
+    background-color: var(--bg-color);
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    color: var(--text-color);
+  }
+  
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+  
+  .day-selection {
+    margin: 20px 0;
+  }
+  
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  .calendar-header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .day {
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #f0f0f0;
+  }
+  
+  .day:hover {
+    background: var(--btn-primary);
+    color: white;
+  }
+  
+  .day.selected {
+    background: var(--btn-primary);
+    color: white;
+  }
+  
+  .day.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    background: #f5f5f5;
+  }
+  
+  .time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .time-slot {
+    padding: 8px 15px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .time-slot:hover {
+    background: var(--btn-primary);
+    color: white;
+  }
+  
+  .time-slot.selected {
+    background: var(--btn-primary);
+    color: white;
+  }
+  
+  .booking-form {
+    display: none;
+  }
+  
+  .booking-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .form-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confirm-btn {
+    background: var(--btn-primary);
+    color: white;
+  }
+  
+  .back-btn {
+    background: #f0f0f0;
+  }
+  
+  /* NGO Details */
+  .ngo-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .ngo-details-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .ngo-details-image {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .ngo-details-info h2 {
+    margin-top: 0;
+  }
+  
+  .ngo-details-description {
+    line-height: 1.6;
+  }
+  
+  .ngo-details-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .ngo-details-meta-item {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .ngo-details-meta-item h4 {
+    margin-bottom: 5px;
+    color: var(--btn-primary);
+  }
+  
+  /* User Profile */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .status-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .success-message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .profile-info-item {
+    margin-bottom: 15px;
+  }
+  
+  .profile-info-item label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .profile-info-item span {
+    display: block;
+    padding: 8px;
+    background: var(--card-bg);
+    border-radius: 5px;
+  }
+  
+  /* Bookings List */
+  .booking-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .booking-item.past {
+    opacity: 0.7;
+    border-left: 4px solid #c62828;
+  }
+  
+  .booking-item h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .booking-item p {
+    margin: 5px 0;
+  }
+  
+  /* Dark mode overrides */
+  body.dark-mode {
+    --bg-color: #171212;
+    --text-color: #fff;
+    --navbar-bg: #171212;
+    --navbar-text: #fff;
+    --card-bg: #222;
+    --border-color: #333;
+    --btn-secondary: #5a6268;
+    --hero-bg-image: url('http://localhost/ngohub-pro/images/home-imagee.png');
+    --hero-gradient: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+    --hero-text-color: #fff;
+  }
+  
+  body.dark-mode .day,
+  body.dark-mode .time-slot,
+  body.dark-mode .back-btn {
+    background: #333;
+    color: #fff;
+    border: 1px solid #444;
+  }
+  body.dark-mode .day:hover,
+  body.dark-mode .day.selected,
+  body.dark-mode .time-slot:hover,
+body.dark-mode .time-slot.selected {
+  background: var(--btn-primary);
+  color: white;
+}
+
+/* Add booking actions styling */
+.booking-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.booking-actions button {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.edit-booking {
+  background: #ffc107;
+  color: #000;
+}
+
+.delete-booking {
+  background: #dc3545;
+  color: #fff;
+}
+  
+  body.dark-mode .day.disabled {
+    background: #222;
+    color: #666;
+  }
+  
+  @media (max-width: 900px) {
+    .hero,
+    .about,
+    .ngos,
+    .contact,
+    .social-media {
+      padding: 20px 16px;
+    }
+    .hero-content {
+      max-width: 100%;
+      left: 16px;
+      bottom: 16px;
+    }
+    .hero-content h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    .ngo-card {
+      flex-direction: column;
+    }
+    .ngo-card img {
+      width: 100%;
+      height: auto;
+    }
+    .modal-content {
+      width: 90%;
+      margin: 20% auto;
+    }
+    .ngo-details-header {
+      flex-direction: column;
+    }
+    .ngo-details-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+ 
+@media (max-width: 1200px) {
+  .hero {
+    padding: 40px 80px 0 80px;
+  }
+  
+  .about, .ngos, .contact, .social-media {
+    padding: 40px 80px;
+  }
+  
+  .hero-content h1 {
+    font-size: 42px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 40px 40px 0 40px;
+    min-height: 400px;
+  }
+  
+  .about, .ngos, .contact, .social-media {
+    padding: 40px 40px;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  
+  .hero-content p {
+    font-size: 15px;
+  }
+  
+  .ngo-card {
+    flex-direction: column;
+  }
+  
+  .ngo-card img {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile navigation layout */
+  .navbar {
+    flex-direction: column;
+    padding: 8px 16px;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-left {
+    display: none;
+  }
+  
+  .navbar-center {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+    padding: 8px 0;
+  }
+  
+  .navbar-center a {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+  
+  .navbar-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 8px 16px;
+    background: var(--navbar-bg);
+    border-bottom-left-radius: 8px;
+  }
+  
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+  
+  .avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  
+  /* Hero section */
+  .hero {
+    padding: 80px 20px 40px 20px;
+    min-height: 350px;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+  }
+  
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 12px;
+  }
+  
+  .hero-content p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  /* Content sections */
+  .about, .ngos, .contact, .social-media {
+    padding: 30px 20px;
+  }
+  
+  .about h1, .ngos h2, .contact h2, .social-media h2 {
+    font-size: 24px;
+  }
+  
+  /* NGO cards */
+  .ngo-card {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .ngo-card h4 {
+    font-size: 20px;
+  }
+  
+  .ngo-card p {
+    font-size: 14px;
+  }
+  
+  /* Modal adjustments */
+  .modal-content {
+    width: 90%;
+    margin: 15% auto;
+    padding: 20px;
+  }
+  
+  .calendar {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .day {
+    padding: 5px;
+  }
+  
+  .time-slots {
+    gap: 8px;
+  }
+  
+  .time-slot {
+    padding: 6px 12px;
+  }
+  
+  /* Contact form */
+  .contact-form {
+    max-width: 100%;
+  }
+  
+  /* Social icons */
+  .social-icons {
+    gap: 20px;
+  }
+  
+  .social-icon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Even smaller screens */
+  .hero {
+    padding: 70px 16px 30px 16px;
+    min-height: 300px;
+  }
+  
+  .hero-content h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+  
+  /* NGO details */
+  .ngo-details-header {
+    flex-direction: column;
+  }
+  
+  .ngo-details-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+  
+  /* Calendar in booking modal */
+  .calendar-header {
+    font-size: 14px;
+  }
+  
+  .day {
+    font-size: 12px;
+  }
+  
+  /* Time slots */
+  .time-slot {
+    font-size: 12px;
+  }
+  
+  /* Form navigation buttons */
+  .form-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Additional very small screen adjustments */
+@media (max-width: 360px) {
+  .navbar-center a {
+    font-size: 11px;
+  }
+  
+  .hero-content h1 {
+    font-size: 22px;
+  }
+  
+  .about h1, .ngos h2, .contact h2 {
+    font-size: 22px;
+  }
+  
+  .ngo-card {
+    padding: 16px;
+  }
+  
+  .modal-content {
+    padding: 16px;
+  }
+  
+  .social-icons {
+    gap: 16px;
+  }
+}
+
+/* Ensure footer stays above bottom nav */
+@media (max-width: 768px) {
+  footer {
+    padding-bottom: 70px; /* Space for fixed bottom nav */
+  }
+  
+  /* Adjust modal positioning to account for bottom nav */
+  .modal {
+    padding-bottom: 70px;
+  }
+  
+  /* Make sure content isn't hidden behind nav */
+  main {
+    padding-bottom: 20px;
+  }
+}
+
+/* Smooth transitions for layout changes */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar-center {
+  transition: all 0.3s ease;
+}
+
+/* Ensure clickable elements have proper touch targets on mobile */
+@media (max-width: 768px) {
+  .navbar-center a, 
+  .theme-toggle, 
+  .avatar,
+  .btn-primary,
+  .btn-secondary,
+  .time-slot,
+  .day:not(.disabled) {
+    min-height: 44px; /* Recommended minimum touch target size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-center a {
+    flex: 1;
+    text-align: center;
+  }
+}
