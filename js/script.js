@@ -273,43 +273,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Display user bookings with delete functionality
   function displayUserBookings(bookings) {
+    const bookingsList = document.getElementById('bookingsList');
+    
     if (bookings.length === 0) {
-      bookingsList.innerHTML = '<p>You have no scheduled visits.</p>';
+        bookingsList.innerHTML = '<p>You have no scheduled visits.</p>';
     } else {
-      bookingsList.innerHTML = '';
-      bookings.forEach(booking => {
-        const bookingDate = new Date(booking.visit_date);
-        const now = new Date();
-        const isPast = bookingDate < now;
-        
-        const bookingItem = document.createElement('div');
-        bookingItem.className = `booking-item ${isPast ? 'past' : ''}`;
-        bookingItem.innerHTML = `
-          <h4>${booking.ngo_name}</h4>
-          <p><strong>Date:</strong> ${formatDate(booking.visit_date)}</p>
-          <p><strong>Time:</strong> ${booking.visit_time}</p>
-          <p><strong>Status:</strong> ${isPast ? 'Completed' : 'Upcoming'}</p>
-          <div class="booking-actions">
-            <button class="btn-secondary delete-booking" data-booking-id="${booking.id}">Delete</button>
-          </div>
-        `;
-        bookingsList.appendChild(bookingItem);
-      });
-
-     
-      // Add click handlers for delete buttons
-      document.querySelectorAll('.delete-booking').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          const bookingId = this.dataset.bookingId;
-          deleteBooking(bookingId);
+        bookingsList.innerHTML = '';
+        bookings.forEach(booking => {
+            const bookingDate = new Date(booking.visit_date);
+            const now = new Date();
+            const isPast = bookingDate < now;
+            
+            const bookingItem = document.createElement('div');
+            bookingItem.className = `booking-item ${isPast ? 'past' : ''}`;
+            bookingItem.innerHTML = `
+                <h4>${booking.ngo_name}</h4>
+                <p><strong>Date:</strong> ${formatDate(booking.visit_date)}</p>
+                <p><strong>Time:</strong> ${booking.visit_time}</p>
+                <p><strong>Status:</strong> ${isPast ? 'Completed' : 'Upcoming'}</p>
+                <div class="booking-actions">
+                    <button class="btn-secondary delete-booking" data-booking-id="${booking.id}">Delete</button>
+                </div>
+            `;
+            bookingsList.appendChild(bookingItem);
         });
-      });
+
+        // Add click handlers for delete buttons
+        document.querySelectorAll('.delete-booking').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const bookingId = this.dataset.bookingId;
+                deleteBooking(bookingId);
+            });
+        });
     }
     
     userProfileModal.style.display = 'none';
     bookingsModal.style.display = 'block';
-  }
+}
 
 
   // Delete booking function
@@ -513,7 +514,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <p>${ngo.details.impact}</p>
           </div>
         </div>
-        
+      </div>
+      <div class="ngo-details-button-container">
         <button class="btn-primary schedule-from-details" data-ngo="${ngo.name}" data-ngo-id="${ngo.id}">Schedule Visit</button>
       </div>
     `;
