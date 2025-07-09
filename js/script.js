@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', function () {
       description: "Dedicated to environmental conservation and sustainability. Our projects include tree planting, clean energy advocacy, and environmental education programs. We work with local communities to create sustainable solutions for environmental challenges.",
       location: "123 Green St, Eco City",
       focusAreas: "Conservation, Education, Sustainability",
-      image: "http://localhost/ngohub-pro/images/green.jpg",
+      image: "http://localhost/NGOHUB/images/green.jpg",
       details: {
         founded: "2005",
         teamSize: "25 employees, 100+ volunteers",
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function () {
       description: "Providing education, healthcare, and support to underprivileged children. We run orphanages, schools, and nutrition programs across the region. Our mission is to give every child a chance for a better future regardless of their background.",
       location: "456 Hope Ave, Compassion Town",
       focusAreas: "Education, Healthcare, Child Welfare",
-      image: "http://localhost/ngohub-pro/images/hope.png",
+      image: "http://localhost/NGOHUB/images/hope.png",
       details: {
         founded: "1998",
         teamSize: "40 employees, 200+ volunteers",
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', function () {
       description: "Bringing healthcare services to underserved communities. Our mobile clinics and health education programs reach thousands each year. We focus on preventive care and health education to create lasting change in community health outcomes.",
       location: "789 Health Blvd, Wellness City",
       focusAreas: "Medical Care, Health Education, Disease Prevention",
-      image: "http://localhost/ngohub-pro/images/health.png",
+      image: "http://localhost/NGOHUB/images/health.png",
       details: {
         founded: "2010",
         teamSize: "30 employees, 150+ volunteers",
