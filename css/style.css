@@ -358,6 +358,18 @@ footer {
   font-size: 14px;
 }
 
+#loginForm, #registerForm, #userProfile {
+  padding: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#loginForm h2, #registerForm h2, #userProfile h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--text-color);
+}
+
 /* Modal styles */
 .modal {
   display: none;
@@ -372,13 +384,14 @@ footer {
 
 .modal-content {
   background-color: var(--bg-color);
-  margin: 5% auto;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  position: relative;
-  color: var(--text-color);
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    color: var(--text-color);
 }
 
 .close {
