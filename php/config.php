@@ -2,7 +2,7 @@
 // Database configuration
 define('DB_HOST', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', '12?34?56?Aa');
 define('DB_NAME', 'ngohubs');
 
 // Create database connection
