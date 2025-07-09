@@ -1,4 +1,8 @@
 /* Root variables for light theme */
+
+/*    Google Fonts (Plus Jakarta Sans from fonts.googleapis.com)
+
+    Font Awesome (for icons from cdnjs.cloudflare.com) */
 :root {
   --bg-color: #fff;
   --text-color: #171212;
